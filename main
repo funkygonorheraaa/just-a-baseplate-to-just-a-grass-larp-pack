@@ -1,0 +1,59 @@
+local bp=workspace.Baseplate
+bp.Material="Grass"
+bp.Color=Color3.fromRGB(80, 109, 84)
+bp.Size = Vector3.new(1024, 20, 1024)
+bp.Position = Vector3.new(0,-10,0)
+local ws=workspace
+local weirdo=Instance.new("Part")
+weirdo.Size=Vector3.new(50, 10, 50)
+weirdo.Position=Vector3.new(0, -4.9, -100)
+weirdo.Color=Color3.fromRGB(91, 93, 105)
+weirdo.Anchored=true
+weirdo.Material="Grass"
+weirdo.Name="weird grass"
+weirdo.Parent=ws
+local shaders=game:GetService("Lighting")
+local theshaders= shaders:FindFirstChild("ColorGrading")
+if theshaders == nil then
+    local tone = Instance.new("ColorGradingEffect")
+    tone.TonemapperPreset = Enum.TonemapperPreset.Retro
+    tone.Parent=shaders
+    tone.Enabled = true
+end
+--destroy just a baseplate maps if they exist
+map = workspace.Folder
+map:Destroy()
+--long live the skybox!
+local sky = shaders:FindFirstChild("Sky")
+sky:destroy()
+if getgenv().extras then
+  --the art easteregg
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/funkygonorheraaa/just-a-baseplate-to-just-a-grass-larp-pack/refs/heads/main/art%20just%20grass"))()
+  --leaderboards
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/funkygonorheraaa/just-a-baseplate-to-just-a-grass-larp-pack/refs/heads/main/kill%20board"))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/funkygonorheraaa/just-a-baseplate-to-just-a-grass-larp-pack/refs/heads/main/time%20leaderboard"))()
+end
+--[=[local time = Instance.new("Part")
+time.Color=Color3.fromRGB(91, 93, 105)
+time.Material= "Grass"
+time.Position =Vector3.new(11, 7.169, -130.24)
+time.Transparency= (0.2)
+time.Size =Vector3.new(8, 10, 0.2)
+time.Parent= ws
+time.Name = "time"
+time.Anchored = true
+local kills = Instance.new("Part")
+kills.Color=Color3.fromRGB(91, 93, 105)
+kills.Material= "Grass"
+kills.Position =Vector3.new(-10.5, 7.169, -130.24)
+kills.Transparency= (0.2)
+kills.Size =Vector3.new(8, 10, 0.2)
+kills.Parent= ws
+kills.Name = "time"
+kills.Anchored = true]=]
+--load doggo gif for extra accuracy
+if getgenv().doggo then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/funkygonorheraaa/stolen-doggo-gif-from-justgrass-to-larp-in-jab/refs/heads/main/the%20stolen%20gui%20but%20to%20lua%20with%20local%20scripts"))()
+end
+--swear to god im about to kill someone
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/funkygonorheraaa/just-a-baseplate-to-just-a-grass-larp-pack/refs/heads/main/time%20leaderboard"))()
