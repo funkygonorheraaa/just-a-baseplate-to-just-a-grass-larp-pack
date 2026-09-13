@@ -37,7 +37,7 @@ end
 if getgenv().doggo then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/funkygonorheraaa/stolen-doggo-gif-from-justgrass-to-larp-in-jab/refs/heads/main/the%20stolen%20gui%20but%20to%20lua%20with%20local%20scripts"))()
 end
-if not getgenv().grasifymap then 
+if not getgenv().grassifymap then 
   map:Destroy()
   return
 end
