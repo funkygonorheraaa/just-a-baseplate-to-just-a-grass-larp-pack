@@ -22,7 +22,7 @@ if theshaders == nil then
 end
 --destroy just a baseplate maps if they exist
 map = workspace.Folder
-map:Destroy()
+--map:Destroy()
 --long live the skybox!
 local sky = shaders:FindFirstChild("Sky")
 sky:destroy()
@@ -33,6 +33,20 @@ if getgenv().extras then
   loadstring(game:HttpGet("https://raw.githubusercontent.com/funkygonorheraaa/just-a-baseplate-to-just-a-grass-larp-pack/refs/heads/main/kill%20board"))()
   loadstring(game:HttpGet("https://raw.githubusercontent.com/funkygonorheraaa/just-a-baseplate-to-just-a-grass-larp-pack/refs/heads/main/time%20leaderboard"))()
 end
+if getgenv().doggo then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/funkygonorheraaa/stolen-doggo-gif-from-justgrass-to-larp-in-jab/refs/heads/main/the%20stolen%20gui%20but%20to%20lua%20with%20local%20scripts"))()
+end
+if not getgenv().grasifymap then 
+  return
+end
+local maps = map:GetDescendants()
+for _, child in pairs(maps) do 
+  if child.ClassName == "Part" then
+    child.Material = "Grass"
+    child.Color=Color3.fromRGB(80, 109, 84)
+end
+  end
+
 --[=[local time = Instance.new("Part")
 time.Color=Color3.fromRGB(91, 93, 105)
 time.Material= "Grass"
@@ -52,8 +66,6 @@ kills.Parent= ws
 kills.Name = "time"
 kills.Anchored = true]=]
 --load doggo gif for extra accuracy
-if getgenv().doggo then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/funkygonorheraaa/stolen-doggo-gif-from-justgrass-to-larp-in-jab/refs/heads/main/the%20stolen%20gui%20but%20to%20lua%20with%20local%20scripts"))()
-end
+
 --swear to god im about to kill someone
 --loadstring(game:HttpGet("https://raw.githubusercontent.com/funkygonorheraaa/just-a-baseplate-to-just-a-grass-larp-pack/refs/heads/main/time%20leaderboard"))()
