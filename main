@@ -22,7 +22,8 @@ if theshaders == nil then
 end
 --destroy just a baseplate maps if they exist
 map = workspace.Folder
---map:Destroy()
+
+
 --long live the skybox!
 local sky = shaders:FindFirstChild("Sky")
 sky:destroy()
@@ -37,6 +38,7 @@ if getgenv().doggo then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/funkygonorheraaa/stolen-doggo-gif-from-justgrass-to-larp-in-jab/refs/heads/main/the%20stolen%20gui%20but%20to%20lua%20with%20local%20scripts"))()
 end
 if not getgenv().grasifymap then 
+  map:Destroy()
   return
 end
 local maps = map:GetDescendants()
