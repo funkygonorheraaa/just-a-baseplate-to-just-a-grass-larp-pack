@@ -42,32 +42,9 @@ if not getgenv().grassifymap then
   return
 end
 local maps = map:GetDescendants()
-for _, child in pairs(maps) do 
-  if child.ClassName == "Part" then
-    child.Material = "Grass"
-    child.Color=Color3.fromRGB(80, 109, 84)
-end
-  end
-
---[=[local time = Instance.new("Part")
-time.Color=Color3.fromRGB(91, 93, 105)
-time.Material= "Grass"
-time.Position =Vector3.new(11, 7.169, -130.24)
-time.Transparency= (0.2)
-time.Size =Vector3.new(8, 10, 0.2)
-time.Parent= ws
-time.Name = "time"
-time.Anchored = true
-local kills = Instance.new("Part")
-kills.Color=Color3.fromRGB(91, 93, 105)
-kills.Material= "Grass"
-kills.Position =Vector3.new(-10.5, 7.169, -130.24)
-kills.Transparency= (0.2)
-kills.Size =Vector3.new(8, 10, 0.2)
-kills.Parent= ws
-kills.Name = "time"
-kills.Anchored = true]=]
---load doggo gif for extra accuracy
-
---swear to god im about to kill someone
---loadstring(game:HttpGet("https://raw.githubusercontent.com/funkygonorheraaa/just-a-baseplate-to-just-a-grass-larp-pack/refs/heads/main/time%20leaderboard"))()
+for _, child in (maps) do -- removed pairs because i dont want to be beat the shit out of
+    if child.ClassName == "Part" then
+        child.Material = Enum.Material.Grass 
+        child.Color=Color3.fromRGB(80, 109, 84)
+    end
+end 
